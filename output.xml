@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.8 on win32)" generated="20230908 14:10:05.162" rpa="false" schemaversion="4">
+<suite id="s1" name="Safaricom-Domains" source="C:\Users\athletics\Desktop\usiu\Summer 2023\Safaricom\safaricom-domains">
+<suite id="s1-s1" name="Tests" source="C:\Users\athletics\Desktop\usiu\Summer 2023\Safaricom\safaricom-domains\Tests">
+<suite id="s1-s1-s1" name="WEB" source="C:\Users\athletics\Desktop\usiu\Summer 2023\Safaricom\safaricom-domains\Tests\WEB">
+<suite id="s1-s1-s1-s1" name="Gherkin" source="C:\Users\athletics\Desktop\usiu\Summer 2023\Safaricom\safaricom-domains\Tests\WEB\gherkin.robot">
+<test id="s1-s1-s1-s1-t1" name="Open Chrome Browser" line="33">
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230908 14:10:05.851" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000015826479FC0&gt;</msg>
+<status status="PASS" starttime="20230908 14:10:05.850" endtime="20230908 14:10:05.851"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--start-maximized</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20230908 14:10:05.851" endtime="20230908 14:10:05.852"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20230908 14:10:05.852" endtime="20230908 14:10:05.853"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Domain}</arg>
+<arg>${BrowserName}</arg>
+<arg>options=${options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230908 14:10:05.854" level="INFO">Opening browser 'Chrome' to base url 'https://domains.safaricom.co.ke'.</msg>
+<status status="PASS" starttime="20230908 14:10:05.853" endtime="20230908 14:10:14.553"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230908 14:10:14.556" endtime="20230908 14:10:14.563"/>
+</kw>
+<status status="PASS" starttime="20230908 14:10:05.847" endtime="20230908 14:10:14.564"/>
+</test>
+<test id="s1-s1-s1-s1-t2" name="Login to the Portal" line="46">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Login')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230908 14:10:14.569" level="INFO">Clicking element 'xpath://a[contains(text(),'Login')]'.</msg>
+<status status="PASS" starttime="20230908 14:10:14.567" endtime="20230908 14:10:15.450"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id:inputEmail</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230908 14:10:15.450" endtime="20230908 14:10:15.657"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:inputEmail</arg>
+<arg>${Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230908 14:10:15.659" level="INFO">Typing text 'josemakerdeng@gmail.com' into text field 'id:inputEmail'.</msg>
+<status status="PASS" starttime="20230908 14:10:15.658" endtime="20230908 14:10:15.884"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:password</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230908 14:10:15.887" level="INFO">Typing text 'Madit@1tungdit100*' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20230908 14:10:15.886" endtime="20230908 14:10:16.141"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:login</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230908 14:10:16.144" level="INFO">Clicking element 'id:login'.</msg>
+<status status="PASS" starttime="20230908 14:10:16.143" endtime="20230908 14:10:18.106"/>
+</kw>
+<status status="PASS" starttime="20230908 14:10:14.566" endtime="20230908 14:10:18.107"/>
+</test>
+<status status="PASS" starttime="20230908 14:10:05.232" endtime="20230908 14:10:18.109"/>
+</suite>
+<status status="PASS" starttime="20230908 14:10:05.224" endtime="20230908 14:10:18.112"/>
+</suite>
+<status status="PASS" starttime="20230908 14:10:05.217" endtime="20230908 14:10:18.119"/>
+</suite>
+<status status="PASS" starttime="20230908 14:10:05.169" endtime="20230908 14:10:18.123"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Safaricom-Domains">Safaricom-Domains</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1" name="Tests">Safaricom-Domains.Tests</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1" name="WEB">Safaricom-Domains.Tests.WEB</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s1-s1-s1" name="Gherkin">Safaricom-Domains.Tests.WEB.Gherkin</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
